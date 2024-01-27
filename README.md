@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif">
+
 # C++ Basic to Advanced with Data Structures and Algorithms
 
 Welcome to the "cpp-basic-to-advanced-with-dsa" repository! This repository is dedicated to learning and practicing C++ programming from basic to advanced concepts, with a focus on Data Structures and Algorithms (DSA).
