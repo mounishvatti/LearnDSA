@@ -2,14 +2,6 @@
 
 Welcome to the "cpp-basic-to-advanced-with-dsa" repository! This repository is dedicated to learning and practicing C++ programming from basic to advanced concepts, with a focus on Data Structures and Algorithms (DSA).
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Topics Covered](#topics-covered)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 
 This repository is created to provide a structured learning path for anyone interested in mastering C++ programming language along with gaining proficiency in Data Structures and Algorithms. Whether you are a beginner or looking to enhance your skills, this repository aims to guide you through the essentials to advanced topics.
@@ -23,3 +15,16 @@ This repository is created to provide a structured learning path for anyone inte
 
 Feel free to explore the content based on your current level and learning objectives.
 This repository will be updated on a regular basis to cover all the topics.
+
+## Resources that you can make use of
+
+### C++ | DSA | Competitive Programming
+[Striver A2Z SDE Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) -  Absolute beginners
+[Striver SDE Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) -  If you are familiar with DSA
+[Striver 79](https://takeuforward.org/interview-sheets/strivers-79-last-moment-dsa-sheet-ace-interviews/) -  Interview prep
+
+[CP | DSA in Hindi](https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-) - By Luv
+
+### Roadmap 
+[neetcode](https://neetcode.io/roadmap) 
+
