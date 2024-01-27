@@ -19,11 +19,11 @@ This repository will be updated on a regular basis to cover all the topics.
 ## Resources that you can make use of
 
 ### C++ | DSA | Competitive Programming
-[Striver A2Z SDE Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) -  Absolute beginners
-[Striver SDE Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) -  If you are familiar with DSA
-[Striver 79](https://takeuforward.org/interview-sheets/strivers-79-last-moment-dsa-sheet-ace-interviews/) -  Interview prep
+[Striver A2Z SDE Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) -  Absolute beginners<br>
+[Striver SDE Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) -  If you are familiar with DSA<br>
+[Striver 79](https://takeuforward.org/interview-sheets/strivers-79-last-moment-dsa-sheet-ace-interviews/) -  Interview prep<br>
 
-[CP | DSA in Hindi](https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-) - By Luv
+[CP | DSA in Hindi](https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-) - By Luv<br>
 
 ### Roadmap 
 [neetcode](https://neetcode.io/roadmap) 
