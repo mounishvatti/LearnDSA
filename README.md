@@ -30,3 +30,6 @@ This repository will be updated on a regular basis to cover all the topics.
 ### Roadmap 
 [`neetcode.io`](https://neetcode.io/roadmap) 
 
+### Competitive Programming Setup in Sublime Text
+
+[`Sublime Text setup for competitive programming`](https://github.com/mounishvatti/competitive-programming-setup)
