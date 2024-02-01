@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <deque>
+#include <iostream>
 using namespace std;
 
 int main(){
@@ -10,11 +11,15 @@ int main(){
     de.push_front(5); // {5,1,2}
     de.emplace_front(0); // {0,5,1,2}
 
-    de.pop_back(); 
-    de.pop_front();
+    for(deque<int>::iterator it = de.begin(); it != de.end(); ++it) {
+        cout << *it << " ";
+    }
 
-    de.back();
-    de.front();
+    de.pop_back();   // remove the last element {0,5,1}
+    de.pop_front();   // remove the first element {5,1}
+
+    de.back();        // return 1
+    de.front();     // return 5
 
     return 0;
 }
