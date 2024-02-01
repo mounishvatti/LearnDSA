@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct Queue{
+class Queue{
+public:
     stack<int> s1, s2;
 
     void enqueue(int x){
@@ -9,7 +10,7 @@ struct Queue{
             s2.push(s1.top());
             s1.pop();
         }
-        
+
         s1.push(x);
 
         while(!s2.empty()){
