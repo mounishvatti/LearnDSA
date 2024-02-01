@@ -120,7 +120,6 @@ void infixToPostfix(string s)
 
 int main()
 {
-
     string exp = "a+b*(c^d-e)^(f+g*h)-i";
 
     // Function call
