@@ -1,52 +1,61 @@
-#include <bits/stdc++.h> 
+#include<bits/stdc++.h>
 using namespace std;
 
-class Stack{
-    queue<int> q1, q2;
-public:
-    void push(int x){
-        q2.push(x);
 
-        while(!q1.empty()){
-            q2.push(q1.front());
-            q1.pop();
+int maxConsecutiveAnswers(string answerKey, int k) {
+    int n = answerKey.length();
+    int countf = 0;
+    int countt = 0;
+    int maxcountt = 0;
+
+        for(int i=0; i<n; i++){
+            int j=1;
+            if(answerKey[i]==answerKey[j]=='T'){
+                countt++;
+                j++;
+            }else if(answerKey![i]==answerKey[j]){
+
+            }
         }
-        
-        queue<int> q = q1;
-    
-        q1=q2;
-        q2=q;
-    }
 
-    void pop(){
-        if(q1.empty()) return;
+        return maxcountt;
+}
 
-        q1.pop();
-    }
-
-    int top(){
-        if(q1.empty()) return -1;
-
-        return q1.front();
-    }
-
-    int size(){
-        return q1.size();
-    }
-};
 
 int main(){
-    Stack s;
-    s.push(1);
-    s.push(2);
-    s.push(3);
-
-    cout << "current size: " << s.size() << endl;
-    cout << s.top() << endl;
-    s.pop();
-    cout << s.top() << endl;
-    s.pop();
-    cout << s.top() << endl;
-    cout << "current size: " << s.size() << endl;
-    return 0;
+    string answerkey;
+    getline(cin,answerkey);
+    int k;
+    cin >> k;
+    int maxmarks = maxConsecutiveAnswers(answerkey,k);
+    cout << maxmarks;
 }
+
+
+
+#include <vector>
+#include <algorithm>
+
+class Solution {
+public:
+    int maxOperations(std::vector<int>& nums, int k) {
+        int n = nums.size();
+        int count = 0;
+        std::sort(nums.begin(), nums.end());
+
+        int i = 0, j = n - 1;
+        while (i < j) {
+            if (nums[i] + nums[j] == k) {
+                count++;
+                i++;
+                j--;
+            } else if (nums[i] + nums[j] < k) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+
+        return count;
+    }
+};

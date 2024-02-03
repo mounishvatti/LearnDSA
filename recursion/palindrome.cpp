@@ -16,11 +16,10 @@ bool isPalindrome(string s, int i, int n)
 int main()
 {
     string name = "MADAM";
-    // cout << "Enter a string: ";
-    // getline(cin,name);
-
+    
     if(isPalindrome(name, 0, name.length()-1)) cout << "YES";
     else cout << "NO";
 
     return 0;
 }
+
