@@ -1,12 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// int calculate(string s)
-// {
-//     int i = 0;
-//     return helper(s, i);
-// }
-
 int helper(string &s, int &i)
 {
     int ans = 0, interim = 0;

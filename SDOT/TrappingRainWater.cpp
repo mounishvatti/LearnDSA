@@ -7,25 +7,20 @@ int trap(vector<int> &height){
     int lpos = 1;
     int rpos = n - 2;
     int water = 0;
-    while (lpos <= rpos)
-    {
-        if (height[lpos] >= lmax)
-        {
+    while (lpos <= rpos){
+        if (height[lpos] >= lmax){
             lmax = height[lpos];
             lpos++;
         }
-        else if (height[rpos] >= rmax)
-        {
+        else if (height[rpos] >= rmax){
             rmax = height[rpos];
             rpos--;
         }
-        else if (lmax <= rmax && height[lpos] < lmax)
-        {
+        else if (lmax <= rmax && height[lpos] < lmax){
             water += lmax - height[lpos];
             lpos++;
         }
-        else
-        {
+        else{
             water += rmax - height[rpos];
             rpos--;
         }
