@@ -12,7 +12,7 @@ int main(){
     }
     int low = 0;
     int high = n-1;
-
+    int mid = (high-low)/2;
     int searchNum;
     cout << "Enter the number you want to search: ";
     cin >> searchNum;
