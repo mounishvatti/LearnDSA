@@ -24,7 +24,7 @@ public:
 
     void print(){
         cout << this->value << endl;
-    }
+    } 
 
     ~Test(){
         cout << "Deconstructor Called" << endl;
