@@ -7,6 +7,15 @@ public:
     int weight;
     int height;
 
+protected:
+    int val1;
+    int val2;
+
+private:
+    string name;
+    string sex;
+
+public:
     void setAge(int age){
         this->age = age;
     }
@@ -22,7 +31,7 @@ public:
 };
 
 // single inheritance
-class Male : public Human{  // cat inherits the properties of animal
+class Male : private Human{  // cat inherits the properties of animal
     public:
     string name;
 

@@ -7,7 +7,7 @@ class Example{
     char c; // 1byte
     short s; // 2bytes 
     double d; // 8bytes
-    long double l; // 16bytes
+    //long double l; // 16bytes
 };
 
 class Test{
@@ -138,6 +138,9 @@ int main()
     cout << "size of rect: " << sizeof(rect) << endl;
 
     (*rect2).display();
+    rect2->display();
+
+    rect.display();
 
     Example e;
     cout << "size of class Example: " << sizeof(e) << endl;
