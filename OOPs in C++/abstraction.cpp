@@ -6,9 +6,8 @@ public:
     int val1;
     int val2;
 
-    virtual void eval(){}
-
-    virtual void eval2(){}
+    virtual void eval() = 0;
+    virtual void eval2() = 0;
 };
 
 class smallTest : public Test{
