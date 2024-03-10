@@ -27,7 +27,7 @@ public:
     } 
 
     ~Test(){
-        cout << "Deconstructor Called" << endl;
+        cout << "Destructor Called" << endl;
     }
 };
 
@@ -169,14 +169,14 @@ int main()
     delete rect3;
     delete rect4;
 
-    // default copy constructor does shallow copying
+    // default copy constructor does deep copying
     // i.e., both objects share the same data member values
 
     // shallow copy
 
     cout << "----- Shallow copy -----" << endl;
 
-    Person p("Suresh", 19); 
+    Person p("Suresh", 19); // statically
 
     Person* q = &p;
 
@@ -248,11 +248,13 @@ int main()
 
     // static
     Test t1; // deconstructor called automatically
-    
+    t1.value = "Lana";
     // dynamic 
     Test *t2 = new Test(); // we have to manully call the desconstructor
 
     // to manually call the destructor we delete the object which was created dynamically
+
+    //t1.value = "Lana";
 
     delete t2;
 

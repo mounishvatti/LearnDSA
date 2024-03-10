@@ -6,6 +6,10 @@ class Car{
     string colour;
     string brand;
     int yom;
+public:
+    void setColour(string colour){
+        this->colour = colour;
+    }
 };
 
 int main(){
