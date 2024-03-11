@@ -1,3 +1,5 @@
+// pure virtual & abstraction
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -11,6 +13,7 @@ public:
 };
 
 class smallTest : public Test{
+public:
     void eval(){
         cout << "Hi there this is eval1 of small Test" << endl;
     }
@@ -21,6 +24,11 @@ class smallTest : public Test{
 };
 
 int main(){
+
+    smallTest *st = new smallTest();
+
+    st->eval();
+    st->eval2();
 
     return 0;
 }

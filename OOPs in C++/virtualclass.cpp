@@ -1,6 +1,4 @@
-// C++ program to illustrate
-// concept of Virtual Functions
-
+// C++ program to illustrate concept of Virtual Functions
 #include <iostream>
 using namespace std;
 
@@ -10,7 +8,6 @@ public:
 
 	void show() { cout << "show base class\n"; }
 };
-
 class derived : public base {
 public:
 	void print() { cout << "print derived class\n"; }
@@ -24,13 +21,13 @@ int main()
 	derived d;
 
 	// Virtual function, binded at runtime
-	bp->print(); // prints: print derived class;
+	bp->print(); // prints: print base class;
 
 	// Non-virtual function, binded at compile time
 	bp->show(); // prints: show base class
 
-	d.show();
-	d.print();
+	d.show(); // show derived class
+	d.print(); // print derived
 
 	bp = &d;
 
