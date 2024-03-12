@@ -10,8 +10,7 @@ void SelectionSort(int arr[], int n){
         int min_index = i; // assume the min index as 1st pos
         for (int j = i; j <= n-1; j++)
         {
-            if (arr[j] < arr[min_index])
-                min_index = j;
+            if (arr[j] < arr[min_index]) min_index = j;
         }
         // swapping
         swap(arr[i], arr[min_index]);
