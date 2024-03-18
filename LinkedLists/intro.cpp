@@ -1,36 +1,96 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
 using namespace std;
 
-class Node{
+// Node class definition
+class Node {
 public:
-    int data;
-    Node* next;
+    int data; // Data stored in the node
+    Node* next; // Pointer to the next node in the list
 
-    Node(int data1, Node* next1){ // constructor
-        data = data1;
-        next = next1;
+    // Constructor that initializes a node with data and sets next to nullptr
+    //Node(int data) : data(data), next(nullptr) {}
+    
+    Node(int data){
+    	this->data = data;
+    	this->next = nullptr;
     }
 
-    Node(int data1){
-        data = data1;
-        next = nullptr;
+    // Constructor that initializes a node with data and a pointer to the next node
+    //Node(int data, Node* next) : data(data), next(next) {}
+    
+    Node(int data, Node* next){
+    	this->data = data;
+    	this->next = next;
     }
 };
-int main(){
-	vector<int> arr = {1,2,3,4};
-	Node* y1 = new Node(arr[0]);
-    Node* y2 = new Node(arr[1],y1);
-    Node* y3 = new Node(arr[2]);
-    Node* y4 = new Node(arr[3]);
-    cout<<"\n";
-	cout <<"Address: " << y1 << ", Value: "<< y1->data <<", "<< &y1->data << endl;
-    cout<<"\n";
-    cout <<"Address: " << y2 << ", Value: "<< y2->data <<", "<< y2->next << endl;
-    cout<<"\n";
-    cout <<"Address: " << y3 << ", Value: "<< y3->data << endl;
-    cout<<"\n";
-    cout <<"Address: " << y4 << ", Value: "<< y4->data << endl;
-    cout<<"\n";
 
-	return 0;
+// Function to append a new node with the given data to the end of the list
+Node* append(Node* head, int data) {
+    // If the list is empty, create a new node and return it
+    if (head == nullptr) {
+        return new Node(data);
+    }
+
+    // Create a new node to be added at the end of the list
+    Node* newNode = new Node(data);
+
+    // Traverse the list to find the last node
+    Node* current = head;
+    while (current->next != nullptr) {
+        current = current->next;
+    }
+
+    // Link the last node to the new node
+    current->next = newNode;
+
+    // Return the head of the list
+    return head;
+}
+
+void print(Node* head){
+	Node* temp = head;
+	while(temp){
+		cout << temp->data << "->";
+		temp = temp->next;
+	}
+	cout << endl;
+}
+
+Node* convertArr2LL(vector<int>arr){
+	Node* head = new Node(arr[0]);
+	Node* mover = head;
+	for(int i=1; i<arr.size(); i++){
+	    Node* temp = new Node(arr[i]);
+	    mover->next = temp;
+	    mover = temp;
+    }
+    return head;
+}
+
+int main() {
+    int n;
+    cin >> n; // Read the number of elements to be added to the list
+
+    Node* head = nullptr; // Initialize the head of the list to nullptr
+    
+    vector<int>arr;
+    
+    for(int i=0; i<n; i++){
+        int ele;
+    	cin >> ele;
+        arr.push_back(ele);
+    }
+	
+	Node* head = convertArr2LL(arr);
+    // Read each element and append it to the list
+    while (n--) {
+        int element;
+        cin >> element;
+        head = append(head, element);
+    }
+
+    // The list is now fully constructed, but we don't do anything with it in this example
+
+    return 0;
 }
