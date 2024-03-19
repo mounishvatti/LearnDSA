@@ -15,7 +15,7 @@ public:
 		this->data = data;
 		this->next = nullptr;
 	}
-}
+};
 
 Node* insertAtStart(Node* head, int data){
 	Node* temp = new Node(data);
@@ -34,6 +34,18 @@ Node* insertAtEnd(Node* tail, int data){
 }
 
 Node* insertAtEnd(Node* head, int data){
+	if(head == NULL){
+		return new Node(data);
+	}
+	Node* temp = head;
+	while(temp->next!=NULL){
+		temp = temp->next;
+	}
+	
+	Node* newNode = new Node(data);
+	
+	temp->next = newNode;
+	
 	
 	return head;
 }
@@ -63,17 +75,49 @@ Node* arrToLinkedList(vector<int>arr){
 	return head;
 }
 
-void print(Node* head){
+Node* deleteHead(Node* head){
+	if(head == NULL){
+		cout << "No head exists!" << endl;
+	}
+	Node* temp = head;
+	head = head->next;
+	
+	delete temp;
+	return head;
+}
+
+Node* deleteTail(Node* head){
+	Node* temp = head;
+	
+	while(temp->next!=NULL){
+		temp = temp->next;
+	}
+	temp->next = nullptr;
+	delete temp;
+	return head;
+}
+
+Node* insertAtpos(Node* head, int data, int pos){
+
 
 }
 
+void print(Node* head){
+	Node* temp = head;
+	while(temp!=NULL){
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+	cout << endl;
+}
+
 int main(){
-
 	vector<int> arr = {1,2,3,4,5,6,7,8,9};
-	
 	int n = arr.size();
+	Node* head = arrToLinkedList(arr);
+	print(head);
+	cout << endl;
 	
 	
-
 	return 0;
 }
