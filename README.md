@@ -33,3 +33,7 @@ This repository will be updated on a regular basis to cover all the topics.
 ### Competitive Programming Setup in Sublime Text
 
 [`Sublime Text setup for competitive programming`](https://github.com/mounishvatti/competitive-programming-setup)
+
+
+> [!NOTE]
+> The codebase and concepts will be updated regularly, several topics like Bit Manipulation, Trees, Graphs are yet to be covered.
