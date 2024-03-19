@@ -16,6 +16,47 @@ public:
 	    next = nullptr;
     }
 };
+Node* deleteHead(Node* head){
+    if(head == NULL){
+        return head;
+    }
+    Node* temp = head;
+    head = head->next;
+    delete(head);
+}
+
+Node* deleteTail(Node* head){
+    if(head==NULL || head->next==NULL) {
+        return NULL;
+    }
+
+    Node* temp = head;
+
+    while(temp->next->next!=NULL){
+        temp = temp->next;
+    }
+
+    free(temp->next);
+    temp->next = nullptr;
+
+    return head;
+}
+
+Node* append(Node* head, int data) {
+    if (head == nullptr) {
+        Node* newHead = new Node(data);
+        return newHead;
+    }
+    Node* val = new Node(data);
+    Node* temp = head;
+    while (temp->next) {
+        temp = temp->next;
+    }
+    temp->next = val;
+
+    return head;
+}
+
 
 Node* convertArr2LL(vector<int>arr){
 	Node* head = new Node(arr[0]);
@@ -39,6 +80,16 @@ int lenLL(Node* head){
 }
 
 int main(){
+	
+	int n;
+    cin >> n;
+    Node* head = nullptr;
+    while (n--) {
+        int ele;
+        cin >> ele;
+        head = append(head, ele);
+    }
+
 	vector<int> arr = {12,3,5,8};
     Node* head = convertArr2LL(arr);
     cout << lenLL(head);

@@ -51,10 +51,22 @@ Node* append(Node* head, int data) {
 void print(Node* head){
 	Node* temp = head;
 	while(temp){
-		cout << temp->data << "->";
+		cout << temp->data << " ";
 		temp = temp->next;
 	}
 	cout << endl;
+}
+
+Node* insertAtBegin(Node* head, int data){
+	if(head==NULL){
+		return new Node(data);
+	}
+	Node* temp = new Node(data);
+	
+	temp->next = head;
+	head = temp;
+	
+	return head;
 }
 
 Node* convertArr2LL(vector<int>arr){
@@ -68,27 +80,51 @@ Node* convertArr2LL(vector<int>arr){
     return head;
 }
 
+Node* getTail(Node* head){
+
+	Node* temp = head;
+	
+	while(temp->next!=NULL){
+		temp = temp->next;
+	} 
+
+	return temp;
+}
+
 int main() {
     int n;
     cin >> n; // Read the number of elements to be added to the list
 
     Node* head = nullptr; // Initialize the head of the list to nullptr
     
-    vector<int>arr;
-    
-    for(int i=0; i<n; i++){
-        int ele;
-    	cin >> ele;
-        arr.push_back(ele);
-    }
-	
-	Node* head = convertArr2LL(arr);
+    // vector<int>arr;
+//     
+//     for(int i=0; i<n; i++){
+//         int ele;
+//     	cin >> ele;
+//         arr.push_back(ele);
+//     }
+// 	
+// 	Node* head = convertArr2LL(arr);
+
     // Read each element and append it to the list
     while (n--) {
         int element;
         cin >> element;
         head = append(head, element);
     }
+    
+    print(head);
+    
+    cout << endl;
+    
+    Node* tail = getTail(head);
+    
+    cout << tail->data;
+    
+    insertAtBegin(head, 6);
+    
+    print(head);
 
     // The list is now fully constructed, but we don't do anything with it in this example
 
