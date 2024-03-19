@@ -2,7 +2,7 @@
 
 # C++ Basic to Advanced with Data Structures and Algorithms
 
-Welcome to the "cpp-basic-to-advanced-with-dsa" repository! This repository is dedicated to learning and practicing C++ programming from basic to advanced concepts, with a focus on Data Structures and Algorithms (DSA).
+Welcome to the "C++ Basic to Advanced DSA" repository! This repository is dedicated to learning and practicing C++ programming from basic to advanced concepts, with a focus on Data Structures and Algorithms (DSA).
 
 ## Introduction
 
@@ -27,13 +27,13 @@ This repository will be updated on a regular basis to cover all the topics.
 
 [`CP | DSA in Hindi`](https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-) - By Luv<br>
 
-### Roadmap 
+### DSA Roadmap 
 [`neetcode.io`](https://neetcode.io/roadmap) 
 
 ### Competitive Programming Setup in Sublime Text
 
 [`Sublime Text setup for competitive programming`](https://github.com/mounishvatti/competitive-programming-setup)
-
+<br>
 
 > [!NOTE]
 > The codebase and concepts will be updated regularly, several topics like Bit Manipulation, Trees, Graphs are yet to be covered.
