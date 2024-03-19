@@ -22,7 +22,9 @@ Node* deleteHead(Node* head){
     }
     Node* temp = head;
     head = head->next;
-    delete(head);
+    delete head;
+    
+    return head;
 }
 
 Node* deleteTail(Node* head){
@@ -81,14 +83,14 @@ int lenLL(Node* head){
 
 int main(){
 	
-	int n;
-    cin >> n;
-    Node* head = nullptr;
-    while (n--) {
-        int ele;
-        cin >> ele;
-        head = append(head, ele);
-    }
+// 	int n;
+//     cin >> n;
+   //  Node* head = nullptr;
+//     while (n--) {
+//         int ele;
+//         cin >> ele;
+//         head = append(head, ele);
+//     }
 
 	vector<int> arr = {12,3,5,8};
     Node* head = convertArr2LL(arr);

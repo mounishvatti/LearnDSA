@@ -69,6 +69,27 @@ Node* insertAtBegin(Node* head, int data){
 	return head;
 }
 
+Node* insertAtEnd(Node* head, int data){
+    if(head==NULL){
+		return new Node(data);
+	}
+	else{
+	   Node* temp = head;
+    
+        while(temp->next!=NULL){
+            temp = temp->next;
+        }
+    
+        Node* newnode = new Node(data);
+    
+        temp->next = newnode; 
+        Node* tail = newnode;
+	}
+    
+    return head;
+    
+}
+
 Node* convertArr2LL(vector<int>arr){
 	Node* head = new Node(arr[0]);
 	Node* mover = head;
@@ -122,9 +143,17 @@ int main() {
     
     cout << tail->data;
     
-    insertAtBegin(head, 6);
+    Node* newHead = insertAtBegin(head, 6);
     
-    print(head);
+    cout << endl;
+    
+    print(newHead);
+    
+    Node* newTail = insertAtEnd(newHead, 7);
+    
+    cout << endl;
+    
+    print(newTail);
 
     // The list is now fully constructed, but we don't do anything with it in this example
 
