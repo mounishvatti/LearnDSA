@@ -15,6 +15,8 @@ This repository is created to provide a structured learning path for anyone inte
 - **Data Structures:** Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Hashing, etc.
 - **Algorithms:** Searching, Sorting, Dynamic Programming, Greedy Algorithms, Divide and Conquer, etc.
 
+- `LeetCode-Solutions` repository: [`Link`](https://github.com/mounishvatti/LeetCode-Solutions)
+
 Feel free to explore the content based on your current level and learning objectives.
 This repository will be updated on a regular basis to cover all the topics.
 
