@@ -18,7 +18,52 @@ public: // access modifier
 	}
 };
 
-Node *convertArrToDLL(vector<int> arr)
+Node* insert(Node* head, int data){
+	if(head==NULL){
+		return new Node(data);
+	}else{
+		Node* curr = head;
+		Node* newNode = new Node(data);
+		curr->next = newNode;
+		newNode->prev = curr;
+	}
+	return head;
+}
+
+Node* insertAtStart(Node* head, int data){
+	Node* newNode = new Node(data);
+	newNode->prev = nullptr;
+	
+	if(head==NULL){
+		head = newNode;
+	}else{
+		Node* temp = head;
+		newNode->next = temp;
+		temp->prev = newNode;
+		head = newNode;
+	}
+	return head;
+}
+
+Node* insertAtEnd(Node* head, int data){
+	if(head==NULL){
+		Node* newNode = new Node(data);
+		newNode->prev = nullptr;
+		head = newNode;
+	}else{
+		Node* temp = head;
+		while(temp->next!=NULL){
+			temp = temp->next;
+		}
+		Node* newNode = new Node(data);
+		
+		temp->next = newNode;
+		newNode->prev = temp;
+	}
+	return head;
+}
+
+Node* convertArrToDLL(vector<int> arr)
 {
 	if (arr.empty())
 	{
@@ -36,7 +81,20 @@ Node *convertArrToDLL(vector<int> arr)
 	return head;
 }
 
+void print(Node* head){
+	Node* temp = head;
+	
+	while(temp){
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+}
+
 int main()
 {
 	vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+	Node* head = convertArrToDLL(arr);
+	
+	print(head);
+	return 0;
 }
