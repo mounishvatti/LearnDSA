@@ -98,8 +98,20 @@ Node* deleteTail(Node* head){
 }
 
 Node* insertAtpos(Node* head, int data, int pos){
+	Node* temp = head;
+	if(head==NULL || pos == 1){
+		return new Node(data);
+	}
+	int count = 1;
+	while(temp->next &&  count < pos-1) {
+		count++;
+		temp = temp->next;
+	}
+	Node* newNode = new Node(data);
+	newNode->next = temp->next;
+	temp->next = newNode;
 
-
+	return head;
 }
 
 void print(Node* head){
