@@ -27,7 +27,7 @@ This repository will be updated on a regular basis to cover all the topics.
 [`Striver SDE Sheet`](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) -  If you are familiar with DSA<br>
 [`Striver 79`](https://takeuforward.org/interview-sheets/strivers-79-last-moment-dsa-sheet-ace-interviews/) -  Interview prep<br>
 
-[`CP | DSA in Hindi`](https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-) - By Luv<br>
+[`Competitive Programming + DSA in Hindi`](https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-) - By Luv<br>
 
 ### DSA Roadmap 
 [`neetcode.io`](https://neetcode.io/roadmap) 
