@@ -20,7 +20,10 @@ public: // access modifier
 
 Node* insert(Node* head, int data){
 	if(head==NULL){
-		return new Node(data);
+		Node* newNode = new Node(data);
+		//newNode->prev = nullptr;
+		head = newNode;
+		return head;
 	}else{
 		Node* curr = head;
 		Node* newNode = new Node(data);
