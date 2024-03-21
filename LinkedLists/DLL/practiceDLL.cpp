@@ -66,6 +66,75 @@ Node* insertAtEnd(Node* head, int data){
 	return head;
 }
 
+Node* insertAtPos(Node* &head, int pos, int data) {
+	if(head==NULL || pos == 1){
+		if(head!=NULL){
+			Node* temp = head;
+			Node* newNode = new Node(data);
+			newNode->next = temp;
+			temp->prev = newNode;
+			head = newNode;
+		}else{
+			Node* newNode = new Node(data);
+			head = newNode;
+		}
+	}
+	else{
+		Node* temp = head;
+		int count = 1;
+		
+		while(temp->next!=NULL && count < pos-1){
+			temp = temp->next;
+			count++;
+		}
+		Node* newNode = new Node(data);
+		Node* currNode = temp;
+		newNode->next = currNode->next;
+		newNode->prev = currNode;
+		currNode->next = newNode;
+	}
+	return head;
+}
+
+Node* deletePos(Node* &head, int pos){
+	if(head==NULL){
+		return NULL;
+	}else{
+		int count = 1;
+		Node* temp = head;
+		while(temp->next!=NULL && count < pos){
+			temp = temp->next;
+			count++;
+		}
+		Node* node2BeDel = temp;
+		Node* prevNode = temp->prev;
+		Node* nextNode = temp->next;
+		prevNode->next = nextNode;
+		nextNode->prev = prevNode;
+		
+		delete node2BeDel;
+	}
+	return head;
+}
+
+Node* makeCircular(Node* &head){
+	if (head == NULL) {
+        return NULL; // If the list is empty, there's nothing to do
+    }
+    
+	Node* temp = head;
+	
+	while(temp->next!=NULL){
+		temp = temp->next;
+	}
+	
+	Node* tail = temp;
+	tail->next = head;
+	head->prev = tail;
+	
+	return head;
+}
+
 Node* convertArrToDLL(vector<int> arr)
 {
 	if (arr.empty())
@@ -99,5 +168,21 @@ int main()
 	Node* head = convertArrToDLL(arr);
 	
 	print(head);
+	
+	cout << endl;
+	
+	Node* newHead = insertAtPos(head, 4, 0);
+	
+	print(newHead);
+	cout<<endl;
+	
+	Node* updatedList = deletePos(newHead, 4);
+	
+	print(updatedList);
+	cout<<endl;
+	
+	Node* circular = makeCircular(updatedList);
+	print(circular);
+	cout<<endl;
 	return 0;
 }
