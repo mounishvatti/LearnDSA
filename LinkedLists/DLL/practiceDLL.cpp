@@ -117,6 +117,42 @@ Node* deletePos(Node* &head, int pos){
 	return head;
 }
 
+Node* deleteVal(Node* head, int val){
+	Node* temp = head;
+	if(temp == NULL){
+		cout << "Invalid operation!"<<endl;
+		return NULL;
+	}
+	else{
+		while(temp->next){
+			if(temp->data == val && temp == head){
+				Node* nextNode = temp->next;
+				temp->next = nullptr;
+				nextNode->prev = nullptr;
+				head = nextNode;
+			}
+			else if(temp->data == val){
+				Node* currNode = temp;
+				Node* prevNode = temp->prev;
+				Node* nextNode = temp->next;
+				prevNode->next = nextNode;
+				nextNode->prev = prevNode;
+				
+				delete currNode;
+			}
+			temp = temp->next;
+		}
+		if(temp->next == NULL && temp->data == val){
+			Node* currNode = temp;
+			Node* prevNode = temp->prev;
+			prevNode->next = nullptr;
+			currNode->prev = nullptr;
+			delete currNode;	
+		}
+	}
+	return head;
+}
+
 Node* makeCircular(Node* &head){
 	if (head == NULL) {
         return NULL; // If the list is empty, there's nothing to do
@@ -181,8 +217,12 @@ int main()
 	print(updatedList);
 	cout<<endl;
 	
-	Node* circular = makeCircular(updatedList);
-	print(circular);
+	// Node* circular = makeCircular(updatedList);
+// 	print(circular);
+// 	cout<<endl;
+	
+	Node* newList = deleteVal(updatedList, 4);
+	print(newList);
 	cout<<endl;
 	return 0;
 }
