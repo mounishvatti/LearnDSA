@@ -1,24 +1,22 @@
-#include <iostream>
+#include<iostream>
 #include<vector>
 using namespace std;
 
-// normal approach
-int BinarySearch(vector<int>&arr, int target){
-	int size = arr.size();
-	int low = 0;
-	int high = size - 1;
-	
-	
-	while(low <= +high){
-		int mid = (high+low)/2;
-		if(arr[mid] == target) return mid;
-		else if(target > arr[mid]) low = mid+1;
-		else high = mid - 1;
-	}
-	return -1;
+int search(vector<int>&arr, int low, int high, int target){
+    if(low>high) return -1;
+
+    int mid = (low+high)/2;
+
+    if(target == arr[mid]) return mid;
+
+    else if(target > arr[mid]){
+        return search(arr, mid+1, high, target);
+    } 
+    else return search(arr, low, mid-1, target);
 }
 
 int main(){
+
     int n;
     vector<int>arr;
     
@@ -29,7 +27,7 @@ int main(){
     
     for (int i = 0; i < n; i++) {
     	int ele;
-    	cout << "Enter value of pos " << i+1 << " :";
+    	cout << "Enter value of pos " << i+1 << ": ";
     	cin >> ele;
     	arr.push_back(ele);
     }
@@ -39,12 +37,11 @@ int main(){
     cout << "Enter the number you want to search: ";
     cin >> searchNum;
     
-    int ind = BinarySearch(arr, searchNum);
+    int ind = search(arr, 0, n-1, searchNum);
     if(ind == -1) cout << "Element not found in the array" << endl;
     else{
     	cout << "The element is found at position: " << ind+1 << endl;
     }
-    
-	return 0;
-}
 
+    return 0;
+}
