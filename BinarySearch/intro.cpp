@@ -9,7 +9,7 @@ int BinarySearch(vector<int>&arr, int target){
 	int high = size - 1;
 	
 	
-	while(low <= +high){
+	while(low <= high){
 		int mid = (high+low)/2;
 		if(arr[mid] == target) return mid;
 		else if(target > arr[mid]) low = mid+1;
