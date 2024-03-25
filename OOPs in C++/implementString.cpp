@@ -28,7 +28,7 @@ public:
     }
 
     // Method to set the string
-    void set(const char* str) {
+    String& operator=(const char* str) {
         delete[] buffer; // Free the old memory
         if (str) {
             length = strlen(str);
@@ -38,6 +38,7 @@ public:
             buffer = nullptr;
             length = 0;
         }
+        return *this; // Return a reference to the current object
     }
 
     // Method to get the string
@@ -46,16 +47,16 @@ public:
     }
 
     // Method to append to the string
-    void append(const char* str) {
+    String operator+(const char* str) const {
+        String result;
         if (str) {
             int newLength = length + strlen(str);
-            char* newBuffer = new char[newLength + 1];
-            strcpy(newBuffer, buffer);
-            strcat(newBuffer, str);
-            delete[] buffer; // Free the old memory
-            buffer = newBuffer;
-            length = newLength;
+            result.buffer = new char[newLength + 1];
+            strcpy(result.buffer, buffer);
+            strcat(result.buffer, str);
+            result.length = newLength;
         }
+        return result;
     }
 
     // Method to get the length of the string
@@ -66,14 +67,15 @@ public:
 
 int main() {
     String str1;
-    str1.set("Hello, ");
-    str1.append("World!");
-    std::cout << "String: " << str1.get() << std::endl;
-    std::cout << "Length: " << str1.getLength() << std::endl;
+    str1 = "Hello, ";
+    String str2 = "World";
+    String str3 = str1 + str2.get(); // Correctly appends "World" to "Hello, "
+    std::cout << "String: " << str3.get() << std::endl; // Outputs: "Hello, World"
+    std::cout << "Length: " << str3.getLength() << std::endl; // Outputs: 12
 
-    String str2("How are you?");
-    std::cout << "String: " << str2.get() << std::endl;
-    std::cout << "Length: " << str2.getLength() << std::endl;
+    String str4("How are you?");
+    std::cout << "String: " << str4.get() << std::endl; // Outputs: "How are you?"
+    std::cout << "Length: " << str4.getLength() << std::endl; // Outputs: 12
 
     return 0;
 }
