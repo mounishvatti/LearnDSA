@@ -20,6 +20,7 @@ int main()
 	base *bp = new base();
 	derived d;
 
+	base *b1 = new derived();
 	// Virtual function, binded at runtime
 	bp->print(); // prints: print base class;
 
@@ -29,9 +30,15 @@ int main()
 	d.show(); // show derived class
 	d.print(); // print derived
 
-	bp = &d;
+	//bp = &d;
 
-	bp->show();
-	bp->print();
+	bp->show();  // show base
+	bp->print(); // print derived
+
+	cout << "b1" <<endl;
+
+	b1->print();
+	b1->show();
+
 	return 0;
 }

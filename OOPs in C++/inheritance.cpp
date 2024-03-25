@@ -31,12 +31,10 @@ public:
 };
 
 // single inheritance
-class Male : private Human{  // cat inherits the properties of animal
-    public:
-    string name;
+class Male : private Human{  
 
     void setName(string name){
-        this->name = name;
+        //this->name = name;  this will be inaccessible;
     }
 
 };

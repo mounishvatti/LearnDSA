@@ -1,11 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 class Test{
-public:
+    private:
     int val1;
     int val2;
     string name;
 
+    public:
     Test(int val1){
         this->val1 = val1;
     }
@@ -24,7 +25,7 @@ public:
     Test(){}
 
     // function overloading
-
+    public:
     void add(int val1, int val2){
         cout << val1 << " + " << val2  << " = " << val1+val2 << endl;
     }
@@ -45,7 +46,7 @@ public:
 int main(){
     Test t1(10,"Ashish");
 
-    cout << t1.val2 << endl;
+    t1.print();
 
     Test t2(10,20,"Ashish");
 

@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 class Test{
-public:
+private:
     int val;
     string name;
-
+public:
     Test(int val, string name){
         this->val = val;
         this->name = name;
@@ -13,7 +13,7 @@ public:
     Test(){}
 
     void print(){
-        cout << val << " " << name << endl;
+        cout << this->val << " " << this->name << endl;
     }
 };
 int main(){
