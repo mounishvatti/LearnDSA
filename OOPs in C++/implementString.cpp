@@ -27,7 +27,7 @@ public:
         delete[] buffer;
     }
 
-    // Method to set the string
+    // assigning value to a string
     String& operator=(const char* str) {
         delete[] buffer; // Free the old memory
         if (str) {
