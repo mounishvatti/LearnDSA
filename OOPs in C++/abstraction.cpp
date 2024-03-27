@@ -1,5 +1,4 @@
 // pure virtual & abstraction
-
 #include<iostream>
 using namespace std;
 

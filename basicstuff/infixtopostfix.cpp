@@ -3,8 +3,7 @@ using namespace std;
 
 // Function to return precedence of operators
 
-int prec(char c)
-{
+int prec(char c) {
 
     if (c == '^')
 
@@ -25,8 +24,7 @@ int prec(char c)
 
 // Function to return associativity of operators
 
-char associativity(char c)
-{
+char associativity(char c) {
 
     if (c == '^')
 
@@ -38,15 +36,13 @@ char associativity(char c)
 // The main function to convert infix expression
 // to postfix expression
 
-void infixToPostfix(string s)
-{
+void infixToPostfix(string s) {
 
     stack<char> st;
 
     string result;
 
-    for (int i = 0; i < s.length(); i++)
-    {
+    for (int i = 0; i < s.length(); i++) {
 
         char c = s[i];
 
@@ -75,10 +71,8 @@ void infixToPostfix(string s)
         else if (c == ')')
         {
 
-            while (st.top() != '(')
-            {
-
-                result += st.top();
+    while (st.top() != '(')
+                   result += st.top();
 
                 st.pop();
             }
@@ -91,10 +85,8 @@ void infixToPostfix(string s)
         else
         {
 
-            while (!st.empty() && prec(s[i]) < prec(st.top()) || !st.empty() && prec(s[i]) == prec(st.top()) && associativity(s[i]) == 'L')
-            {
-
-                result += st.top();
+    while (!st.empty() && prec(s[i]) < prec(st.top()) || !st.empty() && prec(s[i]) == prec(st.top()) && associativity(s[i]) == 'L')
+                   result += st.top();
 
                 st.pop();
             }
@@ -108,7 +100,7 @@ void infixToPostfix(string s)
     while (!st.empty())
     {
 
-        result += st.top();
+     esult += st.top();
 
         st.pop();
     }
@@ -120,7 +112,7 @@ void infixToPostfix(string s)
 
 int main()
 {
-    string exp = "a+b*(c^d-e)^(f+g*h)-i";
+    strin  exp = "a+b*(c^d-e)^(f+g*h)-i";
 
     // Function call
 
