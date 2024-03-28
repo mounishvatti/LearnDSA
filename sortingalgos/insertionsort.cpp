@@ -1,16 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main(){
     int size = 6;
-    //cin >> size;
     int arr[size] = {13,46,24,52,20,9};
-
-    // Sorting the array using insertion sort algorithm
-
-    for (int i = 0; i <= size-1 ; i++)
-    {
+    for (int i = 0; i <= size-1 ; i++){
         int j = i;
         while(j>0 && arr[j-1] > arr[j]){
             swap(arr[j],arr[j-1]);
@@ -18,8 +12,7 @@ int main()
         }
     }
 
-    for (int i = 0; i < size; i++)
-    {
+    for (int i = 0; i < size; i++){
         cout << arr[i] << " ";
     }
 
