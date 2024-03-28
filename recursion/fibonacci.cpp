@@ -3,9 +3,8 @@ using namespace std;
 
 int f(int n) {
     // Write your code here.
-    if(n <= 1){
-        return n;
-    }
+    if(n <= 1) return n;
+    
     int last = f(n-1);
     int slast = f(n-2);
 
