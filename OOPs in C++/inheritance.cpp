@@ -79,16 +79,16 @@ class Homosapians{
     }
 };
 
-class exp1{
-    public:
+// class exp1{
+//     public:
 
-    void sex(){
-        cout << "69" << endl;
-    }
-};
+//     void sex(){
+//         cout <<  << endl;
+//     }
+// };
 
 // multiple inheritance
-class Hybrid: public Animal, public  Homosapians, public exp1 {
+class Hybrid: public Animal, public  Homosapians {
 
 };  
 
