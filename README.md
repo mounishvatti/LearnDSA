@@ -39,4 +39,4 @@ This repository will be updated on a regular basis to cover all the topics.
 > [!NOTE]
 > The codebase and concepts will be updated regularly, several topics like Bit Manipulation, Trees, Graphs are yet to be covered.
 
-Feel free to contribute to this repository.
+# ❤️ Feel free to contribute to this repository.
