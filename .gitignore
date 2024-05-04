@@ -3,7 +3,6 @@
 
 # Ignore other files
 demo.cpp
-input.in
-output.in
+.in
 test.cpp
 test
