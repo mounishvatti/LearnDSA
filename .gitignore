@@ -1,0 +1,9 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore other files
+demo.cpp
+input.in
+output.in
+test.cpp
+test
