@@ -1,10 +1,10 @@
-<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width = "50">
-
-# ⭐️ - Feel free to contribute to this repository.
-
 ## C++ Basic to Advanced with Data Structures and Algorithms
 
 Welcome to the "C++ Basic to Advanced DSA" repository! This repository is dedicated to learning and practicing C++ programming from basic to advanced concepts, with a focus on Data Structures and Algorithms (DSA).
+
+
+> [!NOTE]
+> The codebase and concepts will be updated regularly, several topics like Bit Manipulation, Trees, and Graphs are yet to be covered.
 
 ### Introduction
 
@@ -20,9 +20,9 @@ This repository is created to provide a structured learning path for anyone inte
 - `LeetCode-Solutions` repository: [`Link`](https://github.com/mounishvatti/LeetCode-Solutions)
 
 Feel free to explore the content based on your current level and learning objectives.
-This repository will be updated on a regular basis to cover all the topics.
+This repository will be updated regularly to cover all the topics.
 
-### Resources that you can make use of
+### Resources that you can make use of:
 
 #### C++ | DSA | Competitive Programming
 [`Striver A2Z SDE Sheet`](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) -  Absolute beginners<br>
@@ -37,6 +37,3 @@ This repository will be updated on a regular basis to cover all the topics.
 #### Competitive Programming Setup in Sublime Text
 
 [`Sublime Text setup for competitive programming`](https://github.com/mounishvatti/competitive-programming-setup)
-<br><br>
-> [!NOTE]
-> The codebase and concepts will be updated regularly, several topics like Bit Manipulation, Trees, Graphs are yet to be covered.
