@@ -1,66 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Structures in C++</title>
-  </head>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-    }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-    }
-    .main-section {
-      background-color: rgb(7, 72, 137);
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Data Structures and Algorithms in C++</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Learn Data Structures and Algorithms in C++</h1>
+        <nav>
+            <ul class="navcontent">
+                <li><a href="#intro"><button>Introduction</button></a></li>
+                <li><a href="#ds"><button>Data Structures</button></a></li>
+                <li><a href="#algo"><button>Algorithms</button></a></li>
+                <li><a href="#resources"><button>Resources</button></a></li>
+            </ul>
+        </nav>
+    </header>
 
-    .contents{
-        margin: 30px;
-        padding: 30px;
-        border-radius: 6px;
-        background-color: rgb(233, 233, 233);
-        border: 1px solid grey;
-        width: 20vw;
-    }
-    li{
-        line-height: 1.5;
-        
-    }
-  </style>
-  <body style="background-image: url(./assets/images/background.jpeg);">
-    <div class="main-section">
-      <p style="font-size: xx-large; font-weight: 600; color: azure;">
-        Data Structures & Algorithms in C++
-      </p>
-    </div>
+    <main>
+        <section id="intro" class="section-box">
+            <h2>Introduction</h2>
+            <p>Welcome to our website dedicated to learning data structures and algorithms in C++.</p> 
+            <br>
+            <p>
+                This site provides a comprehensive guide to help you understand the fundamental concepts and implementations of various data structures and algorithms.</p>
+            <br>
+            <p>Mastering data structures and algorithms is crucial for writing efficient and scalable code, solving complex problems, and excelling in programming interviews.</p>
+        </section>
 
-    <section>
-        <div style="padding-top: 30px; padding-left: 30px;">
-            <p style="font-size: x-large; font-weight: 600">Topics covered</p>
-        </div>
-      <div class="contents">
-        <div>
-          <ul>
-            <li><a href="#arrays">C++ Basics</a></li>
-            <li><a href="#arrays">Basic maths</a></li>
-            <li><a href="#arrays">Arrays</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <section id="ds" class="section-box">
+            <h2>Data Structures</h2>
+            <ul>
+                <li>
+                    <h3>Arrays</h3>
+                    <p>Learn about static and dynamic arrays, their operations, and use cases.</p>
+                </li>
+                <li>
+                    <h3>Linked Lists</h3>
+                    <p>Understand the concept of linked lists, their types (singly, doubly, and circular), and their advantages and disadvantages.</p>
+                </li>
+                <li>
+                    <h3>Stacks</h3>
+                    <p>Explore the stack data structure, its operations (push, pop, and peek), and its applications.</p>
+                </li>
+                <li>
+                    <h3>Queues</h3>
+                    <p>Learn about queues, their operations (enqueue and dequeue), and their variants like circular and priority queues.</p>
+                </li>
+                <li>
+                    <h3>Trees</h3>
+                    <p>Study different types of trees (binary, binary search, AVL, and more), their properties, and traversal algorithms.</p>
+                </li>
+                <li>
+                    <h3>Graphs</h3>
+                    <p>Understand graphs, their representations, and algorithms for graph traversal, shortest paths, and more.</p>
+                </li>
+                <li>
+                    <h3>Hash Tables</h3>
+                    <p>Explore hash tables, their implementation, collision handling techniques, and use cases.</p>
+                </li>
+            </ul>
+        </section>
 
-    <section>
-        <footer>
-            
-        </footer>
-    </section>
-  </body>
+        <section id="algo" class="section-box">
+            <h2>Algorithms</h2>
+            <ul>
+                <li>
+                    <h3>Sorting Algorithms</h3>
+                    <p>Learn about various sorting algorithms like bubble sort, merge sort, quick sort, and their time complexities.</p>
+                </li>
+                <li>
+                    <h3>Searching Algorithms</h3>
+                    <p>Understand linear and binary search algorithms, their implementations, and time complexities.</p>
+                </li>
+                <li>
+                    <h3>Graph Algorithms</h3>
+                    <p>Study algorithms for graph traversal (BFS and DFS), shortest path (Dijkstra's and Floyd-Warshall), and more.</p>
+                </li>
+                <li>
+                    <h3>Dynamic Programming</h3>
+                    <p>Explore the concept of dynamic programming, its principles, and its applications in solving complex problems.</p>
+                </li>
+                <li>
+                    <h3>Greedy Algorithms</h3>
+                    <p>Learn about greedy algorithms, their approach, and how they can be used to solve optimization problems.</p>
+                </li>
+                <li>
+                    <h3>Divide and Conquer</h3>
+                    <p>Understand the divide and conquer strategy, its principles, and its applications in algorithms like merge sort and quick sort.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="resources" class="section-box">
+            <h2>Resources</h2>
+            <ul>
+                <li>
+                    <h3>C++ Tutorials</h3>
+                    <p>Learn C++ from scratch or brush up on your skills with comprehensive tutorials and resources.</p>
+                </li>
+                <li>
+                    <h3>Online Coding Platforms</h3>
+                    <p>Practice coding problems and participate in coding challenges on platforms like LeetCode, HackerRank, and CodeForces.</p>
+                </li>
+                <li>
+                    <h3>Books and e-Books</h3>
+                    <p>Explore a curated list of books and e-books covering data structures, algorithms, and problem-solving techniques.</p>
+                </li>
+                <li>
+                    <h3>Video Lectures</h3>
+                    <p>Watch video lectures from renowned instructors and universities to enhance your understanding of key concepts.</p>
+                </li>
+                <li>
+                    <h3>Practice Problems</h3>
+                    <p>Access a collection of practice problems categorized by data structures and algorithms, with solutions and explanations.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Learn Data Structures and Algorithms. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
