@@ -21,6 +21,22 @@ header {
     align-items: center;
 }
 
+button{
+    border: none;
+    cursor: pointer;
+    background-color: #d2dbe4;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+}
+
+button:hover{
+    background-color: #7693a8;
+    transition: color 0.3s ease;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
