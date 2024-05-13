@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+using namespace std;
 
 int removeElement(vector<int>& nums, int val) {
     int index = 0;
