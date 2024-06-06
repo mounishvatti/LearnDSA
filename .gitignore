@@ -6,3 +6,11 @@ demo.cpp
 .in
 test.cpp
 test
+
+# Ignore all files in the build directory
+build/*
+```
+inputf.in
+outputf.in
+
+
