@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 int func(int num){
@@ -11,7 +11,7 @@ int func(int num){
         num = num - 3;
         result = result * 3;
     }
-    return (n*result);
+    return (num*result);
 }
 
 int main(){
