@@ -1,10 +1,10 @@
 #include <deque>
+#include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
 
 int main(){
     deque<int> de; // last in first out (LIFO)
-
     de.push_back(1); // {1}
     de.emplace_back(2); // {1,2}
 
