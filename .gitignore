@@ -15,3 +15,7 @@ outputf.in
 
 
 .vscode
+.DS_Store
+arrays/.DS_Store
+BinarySearch/.DS_Store
+LinkedLists/.DS_Store
