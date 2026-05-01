@@ -1,4 +1,21 @@
-#include <bits/stdc++.h> 
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <array>
+#include <utility>
+#include <numeric>
+#include <limits>
+#include <climits>
+#include <cmath> 
 using namespace std;
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
 {
@@ -7,7 +24,7 @@ vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, i
 	int n2 = arr2.size();
 
 	vector<int>res;
-	int vis[m]={0};
+    vector<int> vis(m, 0);
 
 	for(int i=0; i<n1; i++){
 		for(int j=0; j<n2; j++){

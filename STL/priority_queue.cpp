@@ -1,4 +1,21 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <array>
+#include <utility>
+#include <numeric>
+#include <limits>
+#include <climits>
+#include <cmath>
 using namespace std;
 
 int main(){
@@ -14,15 +31,15 @@ int main(){
     cout << pq.top(); // prints 7
 
     // MINIMUM HEAP
-    priority_queue<int, vector<int>, greater<int>> pq;
+    priority_queue<int, vector<int>, greater<int>> pqMin;
     
-    pq.push(1); // {1}
-    pq.push(2); // {1, 2}
-    pq.push(3); // {1, 2, 3}
-    pq.emplace(7); // {1, 2, 3, 7}
-    pq.push(5); // {1, 2, 3, 5, 7}
+    pqMin.push(1); // {1}
+    pqMin.push(2); // {1, 2}
+    pqMin.push(3); // {1, 2, 3}
+    pqMin.emplace(7); // {1, 2, 3, 7}
+    pqMin.push(5); // {1, 2, 3, 5, 7}
 
-    cout << pq.top(); // prints 1
+    cout << pqMin.top(); // prints 1
 
     return 0;
 }

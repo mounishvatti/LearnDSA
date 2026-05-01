@@ -1,4 +1,21 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <array>
+#include <utility>
+#include <numeric>
+#include <limits>
+#include <climits>
+#include <cmath>
 using namespace std;
 
 // Brute force method; 
@@ -9,7 +26,7 @@ using namespace std;
 
 int main(){
 
-    int size = 5;
+    const int size = 5;
     int arr[size] = {3,2,9,1,6};
      
     int largest = arr[0];

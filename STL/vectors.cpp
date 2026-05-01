@@ -52,46 +52,46 @@ int main(){
 
     // Deletion - to delete the elements of the vector
     // we use the .erase() function to do it
-    vector<int> v1;
+    vector<int> v3;
 
-    v1.push_back(10);
-    v1.emplace_back(20);
-    v1.emplace_back(30);
-    v1.emplace_back(40);
-    v1.emplace_back(50);
+    v3.push_back(10);
+    v3.emplace_back(20);
+    v3.emplace_back(30);
+    v3.emplace_back(40);
+    v3.emplace_back(50);
 
     // {10,20,30,40,50}
 
-    for(auto i : v1){
+    for(auto i : v3){
         cout << i << " ";
     }
     cout << endl;
 
-    v1.erase(v1.begin()+1); // {10,30,40,50}
+    v3.erase(v3.begin()+1); // {10,30,40,50}
 
-    for(auto i : v1){
+    for(auto i : v3){
         cout << i << " ";
     }
     //deleting a range (start,end+1)
 
-    v1.erase(v1.begin()+1,v1.begin()+3); //{10,50}
+    v3.erase(v3.begin()+1,v3.begin()+3); //{10,50}
 
     // Insertion -> vec.insert(pos);
 
-    v1.insert(v1.begin(), 0); // {0,10,50}
-    v1.insert(v1.begin(), 2, 40); // {40,40,0,10,50}  2 occurances of 40 at the beginning
+    v3.insert(v3.begin(), 0); // {0,10,50}
+    v3.insert(v3.begin(), 2, 40); // {40,40,0,10,50}  2 occurances of 40 at the beginning
 
     // {40,40,0,10,50}
-    v1.size(); // 5
+    v3.size(); // 5
 
     // {40,40,0,10,50}
-    v1.pop_back(); //removes the last element
+    v3.pop_back(); //removes the last element
 
-    v1.clear(); //erases the entire vector
+    v3.clear(); //erases the entire vector
 
-    v1.swap(v2); //swapping two vectors v1 & v2
+    v3.swap(v2); //swapping two vectors v3 & v2
 
-    v1.empty(); //returns a boolean value True or False 
+    v3.empty(); //returns a boolean value True or False 
 
     // true if vector is empty, else false.
 

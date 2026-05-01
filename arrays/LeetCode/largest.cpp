@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 #include <climits>
 #include <algorithm>
@@ -76,15 +77,17 @@ int second_smallest(vector<int>& arr) {
 }
 
 int main(){
-    vector<int> arr = {1,2,3,4,5,6,7,8,9,0}
+    vector<int> arr = {1,2,3,4,5,6,7,8,9,0};
 
-    int largest = largest(arr);
-    int smallest = smallest(arr);
-    int s_largest = s_largest(arr);
-    int s_smallest = s_smallest(arr);
+    int largestValue = largest(arr);
+    int smallestValue = smallest(arr);
+    int secondLargestValue = second_largest(arr);
+    int secondSmallestValue = second_smallest(arr);
 
-    cout << "Largest: " << largest << endl;
-    cout << "smallest: " << smallest << endl;
+    cout << "Largest: " << largestValue << endl;
+    cout << "Smallest: " << smallestValue << endl;
+    cout << "Second Largest: " << secondLargestValue << endl;
+    cout << "Second Smallest: " << secondSmallestValue << endl;
 
     return 0;
 }

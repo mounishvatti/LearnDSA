@@ -1,8 +1,25 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <array>
+#include <utility>
+#include <numeric>
+#include <limits>
+#include <climits>
+#include <cmath>
 using namespace std;
 
 // approach - 1
-vector<int> twoSum(vector<int>&arr, int target){
+vector<int> twoSumBrute(vector<int>&arr, int target){
     int n = arr.size();
     vector<int> ans;
     for(int i=0; i<arr.size(); i++){

@@ -1,4 +1,21 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <array>
+#include <utility>
+#include <numeric>
+#include <limits>
+#include <climits>
+#include <cmath>
 #include "LinkedList.h"
 
 using namespace std;
@@ -181,13 +198,13 @@ Node *segregateEvenOdd(Node *head)
 		arr.push_back(temp->data);
 
 	// replace the values in the linked list
-	Node *temp = head;
+	Node *temp2 = head;
 	int i = 0;
-	while (temp)
+	while (temp2)
 	{
-		temp->data = arr[i];
+		temp2->data = arr[i];
 		i++;
-		temp = temp->next;
+		temp2 = temp2->next;
 	}
 	return head;
 }

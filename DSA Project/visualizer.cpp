@@ -1,6 +1,39 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <array>
+#include <utility>
+#include <numeric>
+#include <limits>
+#include <climits>
+#include <cmath>
+#if __has_include(<SDL2/SDL.h>)
+#include <SDL2/SDL.h>
+#define HAS_SDL 1
+#elif __has_include(<SDL.h>)
 #include <SDL.h>
+#define HAS_SDL 1
+#else
+#define HAS_SDL 0
+#endif
 using namespace std;
+
+#if !HAS_SDL
+int main()
+{
+    cout << "SDL headers not found. Install SDL2 or configure include paths to build the visualizer." << endl;
+    return 0;
+}
+#else
 
 const int SCREEN_WIDTH=910;
 const int SCREEN_HEIGHT=750;
@@ -521,3 +554,4 @@ int main(int argc, char* args[])
 
     return 0;
 }
+#endif

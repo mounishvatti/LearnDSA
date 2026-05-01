@@ -17,7 +17,24 @@ Here, the length of the longest subarray is 3, which is our final answer.
 
 */
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <array>
+#include <utility>
+#include <numeric>
+#include <limits>
+#include <climits>
+#include <cmath>
 using namespace std;
 
 // brute force method
@@ -80,7 +97,7 @@ int longestSubarrayWithSumKHashing(vector<int> a, long long k)
     return maxLen;
 }
 
-int longestSubarrayWithSumK(vector<int> a, long long k) {
+int longestSubarrayWithSumKTwoPointer(vector<int> a, long long k) {
     int n = a.size(); // size of the array.
 
     int left = 0, right = 0; // 2 pointers
@@ -118,7 +135,24 @@ int main()
 
 // if array contains negative numbers
 
-#include <bits/stdc++.h> 
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <array>
+#include <utility>
+#include <numeric>
+#include <limits>
+#include <climits>
+#include <cmath> 
 int getLongestSubarray(vector<int>& nums, int k){
     int n = nums.size();
     map<int, int> preSumMap;
