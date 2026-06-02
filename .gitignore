@@ -1,5 +1,5 @@
 # Ignore Mac system files
-.DS_store
+*.DS_Store
 
 # Ignore other files
 demo.cpp
@@ -15,7 +15,3 @@ outputf.in
 
 
 .vscode
-.DS_Store
-arrays/.DS_Store
-BinarySearch/.DS_Store
-LinkedLists/.DS_Store
